@@ -11,7 +11,6 @@ class Solution {
 
         Stack<Integer> stack = new Stack<>();
 
-        // Previous strictly smaller element
         for (int i = 0; i < n; i++) {
             while (!stack.isEmpty()
                     && arr[stack.peek()] >= arr[i]) {
@@ -25,7 +24,6 @@ class Solution {
 
         stack.clear();
 
-        // Next smaller or equal element
         for (int i = n - 1; i >= 0; i--) {
             while (!stack.isEmpty()
                     && arr[stack.peek()] > arr[i]) {
